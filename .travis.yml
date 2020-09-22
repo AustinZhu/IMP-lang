@@ -2,5 +2,4 @@ language: haskell
 cabal: "3.2"
 ghc:
   - "8.8.4"
-script:
-  - cabal install --only-dependencies
+script: cabal install --only-dependencies
