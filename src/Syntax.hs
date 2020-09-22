@@ -1,8 +1,9 @@
 module Syntax
-    ( Aexp,
-      Bexp,
-      Com
-    ) where
+  ( Aexp,
+    Bexp,
+    Com,
+  )
+where
 
 data Aexp = N Int | Loc String | Add Aexp Aexp | Sub Aexp Aexp | Mul Aexp Aexp deriving (Show)
 
