@@ -56,6 +56,6 @@ coms = parentheses coms <|> seqCom
         defCom = do
           loc <- location
           operator ":="
-          Def loc <$> aExp
+          Let loc <$> aExp
         skipCom = keyword "skip" >> return Skip
     seqCom = parentheses seqCom <|> do cs <- sepBy1 com semicolon; return $ if length cs == 1 then head cs else Seq cs
