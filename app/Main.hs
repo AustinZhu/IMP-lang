@@ -1,6 +1,15 @@
 module Main where
 
-import Syntax
+import Parser (impParser)
+import Syntax (Com)
+import Text.Parsec.Prim (parse)
 
-main :: IO ()
-main = return ()
+parseIMP :: String -> Com
+parseIMP str = case parse impParser "" str of
+  Left e -> error $ show e
+  Right r -> r
+
+main :: IO String
+main = do
+  ast <- parseIMP <$> getLine
+  return $ show ast

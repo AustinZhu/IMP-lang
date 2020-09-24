@@ -1,8 +1,11 @@
 module Lexer where
 
+import Data.Functor.Identity (Identity)
+import Text.Parsec (ParsecT)
 import Text.Parsec.Char (alphaNum, letter)
 import Text.Parsec.Token
-  (GenTokenParser,  GenLanguageDef (..),
+  ( GenLanguageDef (..),
+    GenTokenParser,
     identifier,
     integer,
     makeTokenParser,
@@ -13,11 +16,8 @@ import Text.Parsec.Token
     whiteSpace,
   )
 import Text.ParserCombinators.Parsec.Language
-  ( GenLanguageDef (identLetter, identStart, reservedNames, reservedOpNames),
-    emptyDef,
+  ( emptyDef,
   )
-import Text.Parsec (ParsecT)
-import Data.Functor.Identity (Identity)
 
 langDef :: GenLanguageDef String u Identity
 langDef =
@@ -25,7 +25,7 @@ langDef =
     { identStart = letter,
       identLetter = alphaNum,
       reservedNames = ["true", "false", "skip", "if", "then", "else", "while", "do"],
-      reservedOpNames = ["+", "-", "*", "=", "<=", "!", "&", "|", "::="]
+      reservedOpNames = ["+", "-", "*", "=", "<=", "!", "&", "|", ":="]
     }
 
 lexer :: GenTokenParser String u Identity
