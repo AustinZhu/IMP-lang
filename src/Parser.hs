@@ -34,12 +34,12 @@ bExp = buildExpressionParser bOp bTerm
         [Infix (operator "&" >> return And) AssocLeft],
         [Infix (operator "|" >> return Or) AssocLeft]
       ]
+    rOp = (operator "=" >> return Eq) <|> (operator "<=" >> return Leq)
     bTerm =
       parentheses bExp
         <|> (keyword "true" >> return (T True))
         <|> (keyword "false" >> return (T False))
-        <|> do a1 <- aExp; operator "<="; Leq a1 <$> aExp
-        <|> do a1 <- aExp; operator "="; Eq a1 <$> aExp
+        <|> (do a1 <- aExp; op <- rOp; op a1 <$> aExp)
 
 coms :: Parser Com
 coms = parentheses coms <|> seqCom
