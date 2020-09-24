@@ -1,12 +1,17 @@
-module Parser where
+module Parser (parseIMP) where
 
 import Lexer
 import Syntax
-import Text.ParserCombinators.Parsec (Parser, sepBy1, (<|>))
+import Text.ParserCombinators.Parsec (Parser, parse, sepBy1, (<|>))
 import Text.ParserCombinators.Parsec.Expr (Assoc (..), Operator (..), buildExpressionParser)
 
 impParser :: Parser Com
 impParser = space >> coms
+
+parseIMP :: String -> Com
+parseIMP str = case parse impParser "" str of
+  Left e -> error $ show e
+  Right r -> r
 
 aExp :: Parser Aexp
 aExp = buildExpressionParser aOp aTerm
@@ -33,8 +38,8 @@ bExp = buildExpressionParser bOp bTerm
       parentheses bExp
         <|> (keyword "true" >> return (T True))
         <|> (keyword "false" >> return (T False))
-        <|> do a1 <- aExp; operator "="; Eq a1 <$> aExp
         <|> do a1 <- aExp; operator "<="; Leq a1 <$> aExp
+        <|> do a1 <- aExp; operator "="; Eq a1 <$> aExp
 
 coms :: Parser Com
 coms = parentheses coms <|> seqCom
@@ -45,14 +50,14 @@ coms = parentheses coms <|> seqCom
           keyword "if"
           predicate <- bExp
           keyword "then"
-          a1 <- aExp
+          cs <- coms
           keyword "else"
-          If predicate a1 <$> aExp
+          If predicate cs <$> coms
         whileCom = do
           keyword "while"
           predicate <- bExp
           keyword "do"
-          While predicate <$> aExp
+          While predicate <$> coms
         defCom = do
           loc <- location
           operator ":="
