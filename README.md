@@ -1,5 +1,5 @@
-# IMP-Parser
+# IMP-lang
 
 ![](https://travis-ci.org/AustinZhu/IMP-Parser.svg?branch=master)
 
-A simple parser for the IMP language from *"The Formal Semantics of Programming Languages"*
+A implementation of the IMP language from *"The Formal Semantics of Programming Languages"*
