@@ -1,6 +1,6 @@
 # IMP-lang
 
-![](https://travis-ci.org/AustinZhu/IMP-Parser.svg?branch=master)
+[![Haskell CI](https://github.com/AustinZhu/IMP-lang/actions/workflows/haskell.yml/badge.svg)](https://github.com/AustinZhu/IMP-lang/actions/workflows/haskell.yml)
 
 A implementation of the IMP language from *"The Formal Semantics of Programming Languages"*
 
@@ -23,7 +23,7 @@ A implementation of the IMP language from *"The Formal Semantics of Programming 
 
 *c* ::= skip
     | *X* := *a*
-    | *c*; *c*
+    | *c*;*c*
     | if *b* then *c* else *c*
     | while *b* do *c*
 
@@ -67,4 +67,14 @@ A implementation of the IMP language from *"The Formal Semantics of Programming 
   
   ⊢ <skip, *σ*> → *σ*
   
+  <*a*, *σ*> → *m* ⊢ <*X* := *a*, *σ*> → *σ*\[*m*/*X*\]
   
+  <*c0*, *σ*> → *σ''*, <*c1*, *σ''*> → *σ'* ⊢ <*c0*;*c1*, *σ*> → *σ'*
+  
+  <*b*, *σ*> → true, <*c0*, *σ*> → *σ'* ⊢ <if *b* then *c0* else *c1*, *σ*> → *σ'*
+  
+  <*b*, *σ*> → false, <*c1*, *σ*> → *σ'* ⊢ <if *b* then *c0* else *c1*, *σ*> → *σ'*
+  
+  <*b*, *σ*> → false ⊢ <while *b* do *c*, *σ*> → *σ*
+  
+  <*b*, *σ*> → true, <*c*, *σ*> → *σ''*, <while *b* do *c*, *σ''*> → *σ'* ⊢ <while *b* do *c*, *σ*> → *σ'*
