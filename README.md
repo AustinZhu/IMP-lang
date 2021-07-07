@@ -10,6 +10,10 @@ IMP is a small language of while programs.
 IMP is called an "imperative" language because program execution involves carrying out a series of explicit commands to change state.
 Formally, IMP's behaviour is described by rules which specify how its expressions are evaluated and its commands are executed.
 
+## Usage
+
+(To be finished...)
+
 ## Syntax
 
 *a* ::= *n*
