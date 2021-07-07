@@ -2,7 +2,13 @@
 
 [![Haskell CI](https://github.com/AustinZhu/IMP-lang/actions/workflows/haskell.yml/badge.svg)](https://github.com/AustinZhu/IMP-lang/actions/workflows/haskell.yml)
 
-A implementation of the IMP language from *"The Formal Semantics of Programming Languages"*
+A implementation of the IMP language from *"The Formal Semantics of Programming Languages"*.
+
+## Introduction
+
+IMP is a small language of while programs.
+IMP is called an "imperative" language because program execution involves carrying out a series of explicit commands to change state.
+Formally, IMP's behaviour is described by rules which specify how its expressions are evaluated and its commands are executed.
 
 ## Syntax
 
@@ -27,7 +33,7 @@ A implementation of the IMP language from *"The Formal Semantics of Programming 
     | if *b* then *c* else *c*
     | while *b* do *c*
 
-## Evaluation
+## Evaluation Rules
 
 - Aexp
 
