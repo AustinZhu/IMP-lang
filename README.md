@@ -8,9 +8,9 @@ A implementation of the IMP language from *"The Formal Semantics of Programming 
 
 *a* ::= *n*
 
-    | *X*
+    \| *X*
     
-    | *a* + *a*
+    \| *a* + *a*
     
     | *a* - *a*
     
