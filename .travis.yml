@@ -1,5 +1,0 @@
-language: haskell
-cabal: "3.2"
-ghc:
-  - "8.8.4"
-install: cabal install --only-dependencies
