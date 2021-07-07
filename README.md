@@ -7,39 +7,24 @@ A implementation of the IMP language from *"The Formal Semantics of Programming 
 ## Syntax
 
 *a* ::= *n*
-
-    \| *X*
-    
-    \| *a* + *a*
-    
+    | *X*
+    | *a* + *a*
     | *a* - *a*
-    
     | *a* × *a*
   
-  
 *b* ::= true
-
     | false
-    
     | *a* = *a*
-    
     | *a* ≤ *a*
-    
     | ¬ *b*
-    
     | *b* ∧ *b*
-    
     | *b* ∨ *b*
 
 
 *c* ::= skip
-
     | *X* := *a*
-    
     | *c*; *c*
-    
     | if *b* then *c* else *c*
-    
     | while *b* do *c*
 
 ## Evaluation
