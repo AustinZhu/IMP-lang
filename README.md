@@ -2,7 +2,7 @@
 
 [![Haskell CI](https://github.com/AustinZhu/IMP-lang/actions/workflows/haskell.yml/badge.svg)](https://github.com/AustinZhu/IMP-lang/actions/workflows/haskell.yml)
 
-A implementation of the IMP language from *"The Formal Semantics of Programming Languages"*.
+An implementation of the IMP language from *"The Formal Semantics of Programming Languages"* with a REPL environment.
 
 ## Introduction
 
