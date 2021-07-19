@@ -12,7 +12,11 @@ Formally, IMP's behaviour is described by rules which specify how its expression
 
 ## Usage
 
-(To be finished...)
+Currently, there is no pre-build binaries.
+
+To build and run the REPL, execute:
+
+`stack build --exec IMP-lang-exe`
 
 ## Syntax
 

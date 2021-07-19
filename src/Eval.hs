@@ -1,7 +1,9 @@
 module Eval
   ( emptyState,
-    toString,
+    printST,
     evalCom,
+    State,
+    Com,
   )
 where
 
@@ -14,8 +16,8 @@ type State = Map String Integer
 emptyState :: Map String Integer
 emptyState = empty
 
-toString :: State -> String
-toString s = foldl (\acc x -> fst x ++ ": " ++ show (snd x) ++ "\n" ++ acc) "" $ toList s
+printST :: State -> String
+printST s = foldr (\x acc -> fst x ++ ": " ++ show (snd x) ++ "\n" ++ acc) "" $ toList s
 
 evalAexp :: (Aexp, State) -> Integer
 evalAexp (N i, _) = i
