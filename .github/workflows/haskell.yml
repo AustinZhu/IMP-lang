@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-haskell@v1
+    - uses: actions/setup-haskell@v1.1
       with:
         ghc-version: '8.10.4'
         cabal-version: '3.2'
@@ -34,7 +34,9 @@ jobs:
       run: |
         cabal update
         cabal build --only-dependencies --enable-tests --enable-benchmarks
+        
     - name: Build
       run: cabal build --enable-tests --enable-benchmarks all
+      
     - name: Run tests
       run: cabal test all
