@@ -34,7 +34,7 @@ evalBexp (Eq a1 a2, s) = evalAexp (a1, s) == evalAexp (a2, s)
 evalBexp (Leq a1 a2, s) = evalAexp (a1, s) <= evalAexp (a2, s)
 evalBexp (Not b, s) = not $ evalBexp (b, s)
 evalBexp (And b1 b2, s) = evalBexp (b1, s) && evalBexp (b2, s)
-evalBexp (Or b1 b2, s) = evalBexp (b1, s) && evalBexp (b2, s)
+evalBexp (Or b1 b2, s) = evalBexp (b1, s) || evalBexp (b2, s)
 
 evalCom :: (Com, State) -> State
 evalCom (Skip, s) = s
