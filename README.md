@@ -3,6 +3,8 @@
 [![Haskell CI](https://github.com/AustinZhu/IMP-lang/actions/workflows/haskell.yml/badge.svg)](https://github.com/AustinZhu/IMP-lang/actions/workflows/haskell.yml)
 [![Docker](https://github.com/AustinZhu/IMP-lang/actions/workflows/docker.yml/badge.svg)](https://github.com/AustinZhu/IMP-lang/actions/workflows/docker.yml)
 
+![image](https://user-images.githubusercontent.com/42071208/140778328-befad51a-f9c2-44ab-b334-64ffd8bfac4a.png)
+
 An implementation of the IMP language from *"The Formal Semantics of Programming Languages"* with a REPL environment.
 
 ## Introduction
