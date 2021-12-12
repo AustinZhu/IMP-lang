@@ -3,7 +3,7 @@
 [![Haskell CI](https://github.com/AustinZhu/IMP-lang/actions/workflows/haskell.yml/badge.svg)](https://github.com/AustinZhu/IMP-lang/actions/workflows/haskell.yml)
 [![Docker](https://github.com/AustinZhu/IMP-lang/actions/workflows/docker.yml/badge.svg)](https://github.com/AustinZhu/IMP-lang/actions/workflows/docker.yml)
 
-![image](https://user-images.githubusercontent.com/42071208/140778328-befad51a-f9c2-44ab-b334-64ffd8bfac4a.png)
+![image](https://user-images.githubusercontent.com/42₀7₁2₀8/₁4₀778328-befad5₁a-f9c2-44ab-b334-64ffd8bfac4a.png)
 
 An implementation of the IMP language from *"The Formal Semantics of Programming Languages"* with a REPL environment.
 
@@ -52,11 +52,11 @@ To build and run the REPL, execute:
   
   ⊢ <*X*, *σ*> → *σ*(*X*)
 
-  <*a0*, *σ*> → *n0*, <*a1*, *σ*> → *n1* ⊢ <*a0* + *a1*, *σ*> → *n* (if *n* = *n0* + *n1*)
+  <*a₀*, *σ*> → *n₀*, <*a₁*, *σ*> → *n₁* ⊢ <*a₀* + *a₁*, *σ*> → *n* (if *n* = *n₀* + *n₁*)
 
-  <*a0*, *σ*> → *n0*, <*a1*, *σ*> → *n1* ⊢ <*a0* - *a1*, *σ*> → *n* (if *n* = *n0* - *n1*)
+  <*a₀*, *σ*> → *n₀*, <*a₁*, *σ*> → *n₁* ⊢ <*a₀* - *a₁*, *σ*> → *n* (if *n* = *n₀* - *n₁*)
 
-  <*a0*, *σ*> → *n0*, <*a1*, *σ*> → *n1* ⊢ <*a0* × *a1*, *σ*> → *n* (if *n* = *n0* × *n1*)
+  <*a₀*, *σ*> → *n₀*, <*a₁*, *σ*> → *n₁* ⊢ <*a₀* × *a₁*, *σ*> → *n* (if *n* = *n₀* × *n₁*)
 
 - Bexp
 
@@ -64,21 +64,21 @@ To build and run the REPL, execute:
   
   ⊢ <false, *σ*> → false
   
-  <*a0*, *σ*> → *n*, <*a1*, *σ*> → *m* ⊢ <*a0* = *a1*, *σ*> → true (if *n* ≡ *m*)
+  <*a₀*, *σ*> → *n*, <*a₁*, *σ*> → *m* ⊢ <*a₀* = *a₁*, *σ*> → true (if *n* ≡ *m*)
   
-  <*a0*, *σ*> → *n*, <*a1*, *σ*> → *m* ⊢ <*a0* = *a1*, *σ*> → false (if *n* ≠ *m*)
+  <*a₀*, *σ*> → *n*, <*a₁*, *σ*> → *m* ⊢ <*a₀* = *a₁*, *σ*> → false (if *n* ≠ *m*)
   
-  <*a0*, *σ*> → *n*, <*a1*, *σ*> → *m* ⊢ <*a0* ≤ *a1*, *σ*> → true (if *n* ≤ *m*)
+  <*a₀*, *σ*> → *n*, <*a₁*, *σ*> → *m* ⊢ <*a₀* ≤ *a₁*, *σ*> → true (if *n* ≤ *m*)
   
-  <*a0*, *σ*> → *n*, <*a1*, *σ*> → *m* ⊢ <*a0* ≤ *a1*, *σ*> → false (if *n* > *m*)
+  <*a₀*, *σ*> → *n*, <*a₁*, *σ*> → *m* ⊢ <*a₀* ≤ *a₁*, *σ*> → false (if *n* > *m*)
   
   <*b*, *σ*> → true ⊢ <¬*b*, *σ*> → false
   
   <*b*, *σ*> → false ⊢ <¬*b*, *σ*> → true
   
-  <*b0*, *σ*> → *t0*, <*b1*, *σ*> → *t1* ⊢ <*b0* ∧ *b1*, *σ*> → *t* (*t* = true if *t0* ≡ *true* and *t1* ≡ true, otherwise *t* = false)
+  <*b₀*, *σ*> → *t₀*, <*b₁*, *σ*> → *t₁* ⊢ <*b₀* ∧ *b₁*, *σ*> → *t* (*t* = true if *t₀* ≡ *true* and *t₁* ≡ true, otherwise *t* = false)
   
-  <*b0*, *σ*> → *t0*, <*b1*, *σ*> → *t1* ⊢ <*b0* ∨ *b1*, *σ*> → *t* (*t* = true if *t0* ≡ *true* or *t1* ≡ true, otherwise *t* = false)
+  <*b₀*, *σ*> → *t₀*, <*b₁*, *σ*> → *t₁* ⊢ <*b₀* ∨ *b₁*, *σ*> → *t* (*t* = true if *t₀* ≡ *true* or *t₁* ≡ true, otherwise *t* = false)
   
 - Com
   
@@ -86,11 +86,11 @@ To build and run the REPL, execute:
   
   <*a*, *σ*> → *m* ⊢ <*X* := *a*, *σ*> → *σ*\[*m*/*X*\]
   
-  <*c0*, *σ*> → *σ''*, <*c1*, *σ''*> → *σ'* ⊢ <*c0*;*c1*, *σ*> → *σ'*
+  <*c₀*, *σ*> → *σ''*, <*c₁*, *σ''*> → *σ'* ⊢ <*c₀*;*c₁*, *σ*> → *σ'*
   
-  <*b*, *σ*> → true, <*c0*, *σ*> → *σ'* ⊢ <if *b* then *c0* else *c1*, *σ*> → *σ'*
+  <*b*, *σ*> → true, <*c₀*, *σ*> → *σ'* ⊢ <if *b* then *c₀* else *c₁*, *σ*> → *σ'*
   
-  <*b*, *σ*> → false, <*c1*, *σ*> → *σ'* ⊢ <if *b* then *c0* else *c1*, *σ*> → *σ'*
+  <*b*, *σ*> → false, <*c₁*, *σ*> → *σ'* ⊢ <if *b* then *c₀* else *c₁*, *σ*> → *σ'*
   
   <*b*, *σ*> → false ⊢ <while *b* do *c*, *σ*> → *σ*
   
