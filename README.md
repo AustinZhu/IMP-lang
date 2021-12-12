@@ -76,9 +76,9 @@ To build and run the REPL, execute:
   
   <*b*, *σ*> → false ⊢ <¬*b*, *σ*> → true
   
-  <*b₀*, *σ*> → *t₀*, <*b₁*, *σ*> → *t₁* ⊢ <*b₀* ∧ *b₁*, *σ*> → *t* (*t* = true if *t₀* ≡ *true* and *t₁* ≡ true, otherwise *t* = false)
+  <*b₀*, *σ*> → *t₀*, <*b₁*, *σ*> → *t₁* ⊢ <*b₀* ∧ *b₁*, *σ*> → *t* (*t* = true if *t₀* ≡ true and *t₁* ≡ true, otherwise *t* = false)
   
-  <*b₀*, *σ*> → *t₀*, <*b₁*, *σ*> → *t₁* ⊢ <*b₀* ∨ *b₁*, *σ*> → *t* (*t* = true if *t₀* ≡ *true* or *t₁* ≡ true, otherwise *t* = false)
+  <*b₀*, *σ*> → *t₀*, <*b₁*, *σ*> → *t₁* ⊢ <*b₀* ∨ *b₁*, *σ*> → *t* (*t* = true if *t₀* ≡ true or *t₁* ≡ true, otherwise *t* = false)
   
 - Com
   
